@@ -107,9 +107,9 @@ Section section1 section_payload
 	##############################
 	SetOutPath $TEMP\${name}
 	DetailPrint 'Downloading WEDU.msi...'
-	nsExec::ExecToLog 'powershell -NoProfile -inputformat none -executionpolicy bypass -command "(new-object System.Net.WebClient).DownloadFile($\'http://download.microsoft.com/download/8/5/4/854F176A-5C4A-4918-AA49-DFC5847BE34F/WEDU.msi$\',$\'WEDU.msi$\')"'
-	DetailPrint 'Installing WEDU.msi...'
-	nsExec::ExecToLog 'msiexec /I WEDU.msi /qn /L*v "$TEMP\wedu_install.log"'
+	nsExec::ExecToLog 'powershell -NoProfile -inputformat none -executionpolicy bypass -command "(new-object System.Net.WebClient).DownloadFile($\'http://download.microsoft.com/download/8/5/4/854F176A-5C4A-4918-AA49-DFC5847BE34F/WEDU1.2.msi$\',$\'WEDU1.2.msi$\')"'
+	DetailPrint 'Installing WEDU1.2.msi...'
+	nsExec::ExecToLog 'msiexec /I WEDU1.2.msi /qn /L*v "$TEMP\wedu_install.log"'
 
 	##############################
 	SetOutPath $LOCALAPPDATA\Microsoft\WEDU\956cee85-997f-4aaf-aefe-34c9dd317fba
